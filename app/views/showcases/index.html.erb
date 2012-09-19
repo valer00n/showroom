@@ -1,0 +1,29 @@
+<h1>Listing showcases</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Description</th>
+    <th>Color</th>
+    <th>Align</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @showcases.each do |showcase| %>
+  <tr>
+    <td><%= showcase.name %></td>
+    <td><%= showcase.description %></td>
+    <td><%= showcase.color %></td>
+    <td><%= showcase.align %></td>
+    <td><%= link_to 'Show', showcase %></td>
+    <td><%= link_to 'Edit', edit_showcase_path(showcase) %></td>
+    <td><%= link_to 'Destroy', showcase, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Showcase', new_showcase_path %>

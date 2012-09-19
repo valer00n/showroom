@@ -1,4 +1,8 @@
 Showroom::Application.routes.draw do
+  resources :posts
+
+  resources :showcases
+
   authenticated :user do
     root :to => 'home#index'
   end

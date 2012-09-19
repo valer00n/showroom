@@ -1,0 +1,23 @@
+<style type="text/css">
+  body{
+    background: #<%= @showcase.color %> !important;
+    color: #<%= invert_color(@showcase.color) %> !important;
+  }
+</style>
+
+<p id="notice"><%= notice %></p>
+<h2><%= @showcase.name %></h2>
+
+<p>
+  <%= @showcase.description %>
+</p>
+
+<p>
+<%#= @showcase.picture.url(:small) %><br>
+<%#= @showcase.picture.url(:large) %><br>
+<%#= @showcase.picture.url(:normal) %><br>
+<%= image_tag(@showcase.picture.url(:original)) %><br>
+</p>
+
+<%= link_to 'Edit', edit_showcase_path(@showcase) %> |
+<%= link_to 'Back', showcases_path %>

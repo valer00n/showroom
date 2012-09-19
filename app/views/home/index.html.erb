@@ -1,4 +1,14 @@
-<h3>Home</h3>
+<h3>Начало</h3>
+
+<hr>
+<h4>Работы</h4>
+<% @showcases.each do |showcase| %>
+  <p><%=link_to image_tag(showcase.picture.url(:small)), showcase %></p>
+<% end %>
+
+<hr>
+
+<h4>Пользователи системы</h4>
 <% @users.each do |user| %>
-  <p>User: <%=link_to user.name, user %></p>
+  <p><%=link_to user.name, user %></p>
 <% end %>
