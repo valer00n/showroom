@@ -6,3 +6,11 @@
  *= require jquery.ui.all
  *= require_tree .
 */
+
+.one_work {
+  padding: 20px;
+  width: 220px;
+  height: 280px;
+  float: left;
+  margin: 20px;
+}

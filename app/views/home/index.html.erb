@@ -1,14 +1,12 @@
 <h3>Главная</h3>
 
+<h2><%= link_to 'Новая работа', new_showcase_path, :class => 'btn btn-primary btn-large' %></h2>
+
 <hr>
 <h4>Работы</h4>
 <% @showcases.each do |showcase| %>
-  <p><%=link_to image_tag(showcase.picture.url(:small)), showcase %></p>
-<% end %>
-
-<hr>
-
-<h4>Пользователи системы</h4>
-<% @users.each do |user| %>
-  <p><%=link_to user.name, user %></p>
+  <div class="one_work">
+    <%=link_to image_tag(showcase.picture.url(:small)), showcase %>
+    <span><%=link_to showcase.name, showcase %></span>
+  </div>
 <% end %>
