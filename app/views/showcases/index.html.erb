@@ -1,11 +1,9 @@
 <h1>Listing showcases</h1>
 
-<table>
+<table width="100%">
   <tr>
+    <th>Pic</th>    
     <th>Name</th>
-    <th>Description</th>
-    <th>Color</th>
-    <th>Align</th>
     <th></th>
     <th></th>
     <th></th>
@@ -13,10 +11,8 @@
 
 <% @showcases.each do |showcase| %>
   <tr>
+    <td><%= link_to image_tag(showcase.picture.url(:small)), showcase %></td>
     <td><%= showcase.name %></td>
-    <td><%= showcase.description %></td>
-    <td><%= showcase.color %></td>
-    <td><%= showcase.align %></td>
     <td><%= link_to 'Show', showcase %></td>
     <td><%= link_to 'Edit', edit_showcase_path(showcase) %></td>
     <td><%= link_to 'Destroy', showcase, method: :delete, data: { confirm: 'Are you sure?' } %></td>
