@@ -7,6 +7,6 @@
 <% @showcases.each do |showcase| %>
   <div class="one_work">
     <%=link_to image_tag(showcase.picture.url(:small)), showcase %>
-    <span><%=link_to showcase.name, showcase %></span>
+    <h4><%=link_to showcase.name, showcase %></h4>
   </div>
 <% end %>
